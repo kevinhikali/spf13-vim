@@ -1,5 +1,22 @@
 # spf13-vim : Steve Francia's Vim Distribution
 
+# Kevin Installation Tip
+1. install vim
+    sudo apt-get install vim
+2. install spf-13
+    curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+3. adjust theme to system theme
+    echo colorscheme ir_black  >> ~/.vimrc.local
+4. add syntastic include directory
+    add these contents to your working directory in a file named .syntastic_cpp_config
+    -Iinclude/
+    -I/opt/ros/kinetic/include/
+    -I...
+
+5. add gf path
+    add these contents to your .vimrc file
+    set path+=.,/opt/ros/kinetic/include/**
+
                     __ _ _____              _
          ___ _ __  / _/ |___ /      __   __(_)_ __ ___
         / __| '_ \| |_| | |_ \ _____\ \ / /| | '_ ` _ \
